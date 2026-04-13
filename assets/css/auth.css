@@ -1,0 +1,78 @@
+/* auth.css - Global Overrides for Zeus Fidelity */
+
+/* 1. Force styling on ALL inputs, selects, and buttons inside auth */
+.auth-container input, 
+.auth-container select, 
+.auth-container .neo-input {
+    width: 100%;
+    background: #0f172a !important;
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    padding: 18px !important;
+    border-radius: 16px !important;
+    color: white !important;
+    font-size: 1rem !important;
+    box-shadow: inset 4px 4px 10px rgba(0, 0, 0, 0.4) !important;
+    outline: none;
+    transition: 0.3s ease;
+    margin-top: 5px;
+    display: block;
+}
+
+/* 2. Style the Labels */
+.auth-container label {
+    display: block;
+    margin-top: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* 3. Style the Navigation Buttons (Continue, Back, Next) */
+.auth-container button.btn-primary,
+.auth-container button.btn-secondary {
+    padding: 18px 25px !important;
+    border-radius: 16px !important;
+    font-weight: 800 !important;
+    font-size: 1rem !important;
+    cursor: pointer;
+    transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    margin-top: 30px;
+    border: none;
+    width: 100%;
+}
+
+.auth-container .btn-primary {
+    background: #9d50ff !important;
+    color: white !important;
+    box-shadow: 0 10px 20px rgba(157, 80, 255, 0.3) !important;
+}
+
+.auth-container .btn-secondary {
+    background: rgba(255, 255, 255, 0.05) !important;
+    color: white !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.auth-container button:active {
+    transform: scale(0.96);
+}
+
+/* 4. Fix the PIN display specifically */
+.pin-display input.pin-field {
+    text-align: center !important;
+    font-size: 2.2rem !important;
+    letter-spacing: 10px !important;
+    background: rgba(0, 0, 0, 0.3) !important;
+    border: 1px solid var(--primary) !important;
+}
+
+/* 5. Fix Select dropdown arrow */
+select.neo-input {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='www.w3.org' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%239d50ff' stroke-width='2'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") !important;
+    background-repeat: no-repeat !important;
+    background-position: right 20px center !important;
+    background-size: 18px !important;
+}

@@ -1,0 +1,37 @@
+Phase 1: Onboarding & Security (The "Front Door")
+File Name
+	Description	UI Style	Logic
+index.php	Landing Page with "Get Started" & public "Check Status" link.	Neomorphic Hero, Glass Public Tracker Card	PHP router checks for existing session/device cookie.
+register.php	Multi-step user registration form.	Neomorphic Inputs (tactile, soft shadows)	Inserts into users and creates initial balances rows.
+login.php	User credentials submission page.	Neomorphic Form, SVG Icons	PHP password_verify checks credentials. Sets device cookie on success.
+pin_setup.php	Initial setup for the 4-6 digit wallet PIN.	Tactile Neomorphic Number Pad	Hashes and stores the PIN in the users table.
+pin_verify.php	PIN entry screen for quick login on a trusted device.	Full-screen Neomorphic Pad	Verifies PIN hash against DB, grants session access.
+Phase 2: Core Banking & Dashboard (The "Hub")
+File Name
+	Description	UI Style	Logic
+dashboard.php	Main user dashboard summary.	Glassmorphic Balance Cards (carousel), SVG Icons, Neomorphic Buttons	Displays balances for multiple currencies, checks KYC status.
+account_details.php	Expanded view for a single currency (e.g., BTC wallet address).	Glassmorphic Cards, SVG QR Code	Displays detailed currency data and history for that specific asset.
+deposit_hub.php	Select payment method for deposit (Zelle, BTC, etc.).	Neomorphic Buttons	Passes selected method via $_SESSION to the checkout page.
+deposit_checkout.php	Final instructions/QR code screen.	Glassmorphic Overlay	Inserts into transactions table with status 'pending' (admin approval required).
+withdrawal_portal.php	Form for withdrawing funds to external accounts.	Neomorphic Inputs, Glassmorphic Balance Check	PHP checks available_balance in real-time. Inserts 'pending' withdrawal request.
+transfer_internal.php	Send funds to another SwyftTrust user via email/username.	Neomorphic Form	Instant swap logic within the database (P2P).
+transaction_history.php	Comprehensive list of all past activities.	Clean Table Layout, Neomorphic Filters	Fetches all data from the transactions table, filterable by date/status.
+transaction_receipt.php	Detail view of a specific transaction ID.	Glassmorphic Detail Card	Displays all transaction metadata including tracking code.
+Phase 3: Loans, Swaps, & Tracking
+File Name
+	Description	UI Style	Logic
+loan_marketplace.php	Catalog of loan types (Personal, Business, etc.).	Neomorphic Product Cards	Links to application forms.
+loan_application.php	Detailed form to request a specific loan.	Neomorphic Forms, SVG Upload Icons	Inserts into loans table with status 'pending' (admin approval required).
+swap_engine.php	Instant currency exchange interface.	Glassmorphic Swap UI (like GhostSwap)	Instant PHP logic: deducts from one balance, adds to the other. No admin needed.
+check_status_public.php	Public-facing refund/loan tracker (no login required).	Glassmorphic Tracker Container	Uses tracking_code to fetch status from refunds/loans tables.
+check_status_detail.php	Detailed progress view of a specific tracking code.	Glassmorphic Progress Bar Animation	Provides detailed stage messages (e.g., "Admin Reviewing Docs").
+refund_request.php	User initiates a request for a refund on a specific transaction.	Neomorphic Selection List	Inserts into refunds table with status 'requested'.
+Phase 4: KYC & Administration (Back-Office)
+File Name
+	Description	UI Style	Logic
+kyc_status.php	User profile page showing verification status.	Glassmorphic Status Badge	Reads status from user_kyc table.
+kyc_upload.php	Secure portal for uploading ID documents.	Neomorphic File Upload Button	PHP moves files to a secure server location, updates DB path.
+profile_settings.php	Manage user details, security settings, logout.	Neomorphic Forms	Updates users table data.
+admin_dashboard.php	(Admin Only) Overview of all pending requests.	Standard Admin Table UI (Not Neumorphic)	Central hub for all approvals.
+admin_manage_requests.php	(Admin Only) Detail view to Approve/Decline transactions/loans/refunds.	Standard Admin Table UI	Executes the critical PHP logic to move funds between pending and available balances.
+support_notifications.php	In-app notification center.	Glassmorphic List	Displays admin notes or general system messages.

@@ -1,0 +1,85 @@
+/* Partners.css - The Global Network */
+.partners-section {
+  padding: 100px 0;
+  background: var(--bg-dark);
+}
+
+.partners-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.partners-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.partners-header h2 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin: 15px 0;
+}
+
+.partners-header p {
+  color: var(--text-muted);
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #00f294; /* Verified Green */
+  padding: 8px 16px;
+  border-radius: 100px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border: 1px solid rgba(0, 242, 148, 0.2);
+}
+
+/* Marquee Animations (Framer Motion replacement) */
+.marquee-wrapper {
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent, white 10%, white 90%, transparent);
+}
+
+.marquee-track {
+  display: flex;
+  gap: 40px;
+}
+
+/* Define the infinite movement */
+@keyframes marquee-normal {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-33.333%); /* Moves one full set of partners */ }
+}
+
+@keyframes marquee-reverse {
+  0% { transform: translateX(-33.333%); }
+  100% { transform: translateX(0); }
+}
+
+.marquee-normal { animation: marquee-normal 30s linear infinite; }
+.marquee-reverse { animation: marquee-reverse 35s linear infinite; }
+
+.partner-logo-box {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  min-width: 180px; /* Ensure logos stay consistent width */
+  padding: 10px 20px;
+  background: #0f172a;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.logo-symbol {
+  width: 36px; height: 36px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  display: grid; place-items: center;
+  font-weight: 800;
+  color: var(--primary);
+  font-size: 0.9rem;
+}

@@ -1,0 +1,175 @@
+/* SwyftTrust Zeus Style Variables */
+:root {
+    --bg-color: #e0e5ec;
+    --neo-shadow-dark: #a3b1c6;
+    --neo-shadow-light: #ffffff;
+    --glass-bg: rgba(255, 255, 255, 0.3);
+    --accent: #2d3436; /* Professional deep grey */
+}
+/* Zeus Header Core */
+.zeus-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 90px; /* Initial large height */
+    background: transparent; /* Starts clear */
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+}
+
+/* The "Scroll-Down" State (Triggered by JS) */
+.zeus-header.scrolled {
+    height: 70px;
+    background: rgba(224, 229, 236, 0.6); /* Semi-transparent base */
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* Logo DNA */
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.neo-logo {
+    width: 45px;
+    height: 45px;
+    background: var(--bg-color);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 1.4rem;
+    color: var(--accent);
+    /* Subtle Neo Shadow */
+    box-shadow: 5px 5px 10px var(--neo-shadow-dark), 
+               -5px -5px 10px var(--neo-shadow-light);
+}
+
+/* Navigation Links Logic */
+.nav-menu {
+    display: flex;
+    gap: 35px;
+    margin-left: auto;
+    margin-right: 40px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #444;
+    font-weight: 600;
+    font-size: 0.95rem;
+    position: relative;
+    transition: 0.3s;
+}
+
+/* The Underline Animation */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--accent);
+    transition: 0.3s;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Mobile Toggle (Hidden on Desktop) */
+.mobile-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+@media (max-width: 992px) {
+    .nav-menu { display: none; } /* We will build a mobile-specific slide-out later */
+    .mobile-toggle { display: block; }
+}
+
+/* Zeus Footer CSS */
+.zeus-footer {
+    background: var(--bg-color);
+    padding: 60px 20px 40px;
+    margin-top: 100px;
+    /* Neomorphic Pressed Effect */
+    box-shadow: inset 10px 10px 20px var(--neo-shadow-dark), 
+                inset -10px -10px 20px var(--neo-shadow-light);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+}
+
+.footer-column h3 {
+    font-weight: 800;
+    margin: 15px 0;
+    letter-spacing: -1px;
+}
+
+.footer-column h3 span { font-weight: 400; color: #777; }
+
+.footer-column h4 {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    color: var(--accent);
+}
+
+.footer-column ul { list-style: none; padding: 0; }
+.footer-column ul li { margin-bottom: 12px; }
+
+.footer-column ul li a {
+    text-decoration: none;
+    color: #666;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.footer-column ul li a:hover { color: var(--accent); }
+
+/* Status Indicator */
+.status-indicator {
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.status-indicator .dot {
+    width: 8px; height: 8px;
+    background: #00b894;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #00b894;
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 60px auto 0;
+    padding-top: 20px;
+    border-top: 1px solid rgba(0,0,0,0.05);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 0.8rem;
+    color: #888;
+}

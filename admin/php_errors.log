@@ -1,0 +1,101 @@
+[13-Jan-2026 20:03:17 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''20' OFFSET '0'' at line 1 in /home/u975255539/domains/swyfttrust.com/public_html/admin/index.php:61
+Stack trace:
+#0 /home/u975255539/domains/swyfttrust.com/public_html/admin/index.php(61): PDOStatement->execute()
+#1 /home/u975255539/domains/swyfttrust.com/public_html/admin/index.php(601): AdminFunctions->getUsers()
+#2 {main}
+  thrown in /home/u975255539/domains/swyfttrust.com/public_html/admin/index.php on line 61
+[13-Jan-2026 20:05:36 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/u975255539/domains/swyfttrust.com/public_html/admin/index.php on line 1209
+[13-Jan-2026 20:05:36 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/u975255539/domains/swyfttrust.com/public_html/admin/index.php on line 1209
+[13-Jan-2026 20:05:36 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/u975255539/domains/swyfttrust.com/public_html/admin/index.php on line 1209
+[13-Jan-2026 20:05:36 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/u975255539/domains/swyfttrust.com/public_html/admin/index.php on line 1209
+[13-Jan-2026 20:06:01 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/u975255539/domains/swyfttrust.com/public_html/admin/index.php on line 1209
+[13-Jan-2026 20:06:01 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/u975255539/domains/swyfttrust.com/public_html/admin/index.php on line 1209
+[13-Jan-2026 20:06:01 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/u975255539/domains/swyfttrust.com/public_html/admin/index.php on line 1209
+[13-Jan-2026 20:06:01 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/u975255539/domains/swyfttrust.com/public_html/admin/index.php on line 1209
+[13-Jan-2026 20:06:09 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/u975255539/domains/swyfttrust.com/public_html/admin/index.php on line 1209
+[13-Jan-2026 20:06:09 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/u975255539/domains/swyfttrust.com/public_html/admin/index.php on line 1209
+[13-Jan-2026 20:06:09 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/u975255539/domains/swyfttrust.com/public_html/admin/index.php on line 1209
+[13-Jan-2026 20:06:09 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/u975255539/domains/swyfttrust.com/public_html/admin/index.php on line 1209
+[13-Jan-2026 20:07:08 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/u975255539/domains/swyfttrust.com/public_html/admin/index.php on line 1202
+[13-Jan-2026 20:07:08 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/u975255539/domains/swyfttrust.com/public_html/admin/index.php on line 1202
+[13-Jan-2026 20:07:08 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/u975255539/domains/swyfttrust.com/public_html/admin/index.php on line 1202
+[13-Jan-2026 20:07:08 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/u975255539/domains/swyfttrust.com/public_html/admin/index.php on line 1202
+[13-Jan-2026 20:50:01 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`u975255539_swyfttrust`.`audit_logs`, CONSTRAINT `audit_logs_ibfk_1` FOREIGN KEY (`admin_id`) REFERENCES `users` (`id`)) in /home/u975255539/domains/swyfttrust.com/public_html/admin/index.php:37
+Stack trace:
+#0 /home/u975255539/domains/swyfttrust.com/public_html/admin/index.php(37): PDOStatement->execute()
+#1 /home/u975255539/domains/swyfttrust.com/public_html/admin/index.php(153): AdminAuth::logAction()
+#2 /home/u975255539/domains/swyfttrust.com/public_html/admin/index.php(557): AdminFunctions->updateKycStatus()
+#3 {main}
+  thrown in /home/u975255539/domains/swyfttrust.com/public_html/admin/index.php on line 37
+[13-Jan-2026 20:53:04 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`u975255539_swyfttrust`.`audit_logs`, CONSTRAINT `audit_logs_ibfk_1` FOREIGN KEY (`admin_id`) REFERENCES `users` (`id`)) in /home/u975255539/domains/swyfttrust.com/public_html/admin/index.php:37
+Stack trace:
+#0 /home/u975255539/domains/swyfttrust.com/public_html/admin/index.php(37): PDOStatement->execute()
+#1 /home/u975255539/domains/swyfttrust.com/public_html/admin/index.php(153): AdminAuth::logAction()
+#2 /home/u975255539/domains/swyfttrust.com/public_html/admin/index.php(557): AdminFunctions->updateKycStatus()
+#3 {main}
+  thrown in /home/u975255539/domains/swyfttrust.com/public_html/admin/index.php on line 37
+[13-Jan-2026 21:08:59 UTC] PHP Warning:  Trying to access array offset on false in /home/u975255539/domains/swyfttrust.com/public_html/admin/index.php on line 178
+[13-Jan-2026 21:08:59 UTC] PHP Warning:  Trying to access array offset on false in /home/u975255539/domains/swyfttrust.com/public_html/admin/index.php on line 178
+[13-Jan-2026 21:11:57 UTC] PHP Warning:  Trying to access array offset on false in /home/u975255539/domains/swyfttrust.com/public_html/admin/index.php on line 178
+[13-Jan-2026 21:11:57 UTC] PHP Warning:  Trying to access array offset on false in /home/u975255539/domains/swyfttrust.com/public_html/admin/index.php on line 178
+[13-Jan-2026 21:31:05 UTC] Loan processing failed (ID: 2): SQLSTATE[42S02]: Base table or view not found: 1146 Table 'u975255539_swyfttrust.loan_disbursements' doesn't exist
+[13-Jan-2026 23:00:20 UTC] PHP Warning:  Trying to access array offset on false in /home/u975255539/domains/swyfttrust.com/public_html/admin/index.php on line 178
+[13-Jan-2026 23:00:20 UTC] PHP Warning:  Trying to access array offset on false in /home/u975255539/domains/swyfttrust.com/public_html/admin/index.php on line 178
+[12-Feb-2026 17:06:51 UTC] PHP Warning:  Trying to access array offset on false in /home/u975255539/domains/swyfttrust.com/public_html/admin/index.php on line 178
+[12-Feb-2026 17:06:51 UTC] PHP Warning:  Trying to access array offset on false in /home/u975255539/domains/swyfttrust.com/public_html/admin/index.php on line 178
+[12-Feb-2026 17:07:06 UTC] PHP Warning:  Trying to access array offset on false in /home/u975255539/domains/swyfttrust.com/public_html/admin/index.php on line 178
+[12-Feb-2026 17:07:06 UTC] PHP Warning:  Trying to access array offset on false in /home/u975255539/domains/swyfttrust.com/public_html/admin/index.php on line 178
+[13-Feb-2026 22:23:20 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'b.updated_at' in 'SELECT' in /home/u975255539/domains/swyfttrust.com/public_html/admin/index.php:209
+Stack trace:
+#0 /home/u975255539/domains/swyfttrust.com/public_html/admin/index.php(209): PDOStatement->execute()
+#1 /home/u975255539/domains/swyfttrust.com/public_html/admin/index.php(1562): AdminFunctions->getAllBalances()
+#2 {main}
+  thrown in /home/u975255539/domains/swyfttrust.com/public_html/admin/index.php on line 209
+[13-Feb-2026 22:29:12 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'b.updated_at' in 'SELECT' in /home/u975255539/domains/swyfttrust.com/public_html/admin/index.php:209
+Stack trace:
+#0 /home/u975255539/domains/swyfttrust.com/public_html/admin/index.php(209): PDOStatement->execute()
+#1 /home/u975255539/domains/swyfttrust.com/public_html/admin/index.php(1562): AdminFunctions->getAllBalances()
+#2 {main}
+  thrown in /home/u975255539/domains/swyfttrust.com/public_html/admin/index.php on line 209
+[13-Feb-2026 22:29:12 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'b.updated_at' in 'SELECT' in /home/u975255539/domains/swyfttrust.com/public_html/admin/index.php:209
+Stack trace:
+#0 /home/u975255539/domains/swyfttrust.com/public_html/admin/index.php(209): PDOStatement->execute()
+#1 /home/u975255539/domains/swyfttrust.com/public_html/admin/index.php(1562): AdminFunctions->getAllBalances()
+#2 {main}
+  thrown in /home/u975255539/domains/swyfttrust.com/public_html/admin/index.php on line 209
+[13-Feb-2026 22:29:13 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'b.updated_at' in 'SELECT' in /home/u975255539/domains/swyfttrust.com/public_html/admin/index.php:209
+Stack trace:
+#0 /home/u975255539/domains/swyfttrust.com/public_html/admin/index.php(209): PDOStatement->execute()
+#1 /home/u975255539/domains/swyfttrust.com/public_html/admin/index.php(1562): AdminFunctions->getAllBalances()
+#2 {main}
+  thrown in /home/u975255539/domains/swyfttrust.com/public_html/admin/index.php on line 209
+[13-Feb-2026 22:29:18 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'b.updated_at' in 'SELECT' in /home/u975255539/domains/swyfttrust.com/public_html/admin/index.php:209
+Stack trace:
+#0 /home/u975255539/domains/swyfttrust.com/public_html/admin/index.php(209): PDOStatement->execute()
+#1 /home/u975255539/domains/swyfttrust.com/public_html/admin/index.php(1562): AdminFunctions->getAllBalances()
+#2 {main}
+  thrown in /home/u975255539/domains/swyfttrust.com/public_html/admin/index.php on line 209
+[13-Feb-2026 22:29:23 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'b.updated_at' in 'SELECT' in /home/u975255539/domains/swyfttrust.com/public_html/admin/index.php:209
+Stack trace:
+#0 /home/u975255539/domains/swyfttrust.com/public_html/admin/index.php(209): PDOStatement->execute()
+#1 /home/u975255539/domains/swyfttrust.com/public_html/admin/index.php(1562): AdminFunctions->getAllBalances()
+#2 {main}
+  thrown in /home/u975255539/domains/swyfttrust.com/public_html/admin/index.php on line 209
+[13-Feb-2026 22:29:28 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'b.updated_at' in 'SELECT' in /home/u975255539/domains/swyfttrust.com/public_html/admin/index.php:209
+Stack trace:
+#0 /home/u975255539/domains/swyfttrust.com/public_html/admin/index.php(209): PDOStatement->execute()
+#1 /home/u975255539/domains/swyfttrust.com/public_html/admin/index.php(1562): AdminFunctions->getAllBalances()
+#2 {main}
+  thrown in /home/u975255539/domains/swyfttrust.com/public_html/admin/index.php on line 209
+[13-Feb-2026 22:29:33 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'b.updated_at' in 'SELECT' in /home/u975255539/domains/swyfttrust.com/public_html/admin/index.php:209
+Stack trace:
+#0 /home/u975255539/domains/swyfttrust.com/public_html/admin/index.php(209): PDOStatement->execute()
+#1 /home/u975255539/domains/swyfttrust.com/public_html/admin/index.php(1562): AdminFunctions->getAllBalances()
+#2 {main}
+  thrown in /home/u975255539/domains/swyfttrust.com/public_html/admin/index.php on line 209
+[13-Feb-2026 22:29:55 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'b.updated_at' in 'SELECT' in /home/u975255539/domains/swyfttrust.com/public_html/admin/index.php:209
+Stack trace:
+#0 /home/u975255539/domains/swyfttrust.com/public_html/admin/index.php(209): PDOStatement->execute()
+#1 /home/u975255539/domains/swyfttrust.com/public_html/admin/index.php(1562): AdminFunctions->getAllBalances()
+#2 {main}
+  thrown in /home/u975255539/domains/swyfttrust.com/public_html/admin/index.php on line 209

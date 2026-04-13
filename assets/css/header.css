@@ -1,0 +1,115 @@
+/* header.css - Zeus Navigation */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 20px 0;
+  transition: var(--transition);
+}
+
+.header.scrolled {
+  padding: 12px 0;
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(157, 80, 255, 0.2);
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+.logo { display: flex; align-items: center; gap: 10px; cursor: pointer; }
+
+.logo-icon {
+  width: 36px; height: 36px;
+  background: linear-gradient(135deg, var(--primary), #6e2cf2);
+  border-radius: 10px;
+  display: grid; place-items: center;
+  box-shadow: 0 0 15px var(--primary-glow);
+}
+
+.logo-text { font-size: 1.25rem; font-weight: 800; color: white; letter-spacing: -0.5px; }
+.logo-text span { color: var(--primary); }
+
+/* Desktop Navigation */
+.nav-desktop { display: none; gap: 32px; }
+
+@media (min-width: 1024px) {
+  .nav-desktop { display: flex; }
+}
+
+.nav-link { color: var(--text-muted); font-size: 0.95rem; font-weight: 500; }
+.nav-link:hover { color: var(--primary); }
+
+/* Auth Actions */
+.header-auth { display: flex; align-items: center; gap: 15px; }
+
+.login-btn { color: white; font-weight: 600; font-size: 0.95rem; display: none; }
+@media (min-width: 768px) { .login-btn { display: block; } }
+
+.signup-btn {
+  background: var(--primary);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 15px var(--primary-glow);
+}
+
+/* Hamburger - Hidden on Desktop */
+.hamburger {
+  display: grid;
+  place-items: center;
+  background: transparent;
+  border: none;
+  color: white;
+}
+
+@media (min-width: 1024px) {
+  .hamburger { display: none !important; }
+}
+
+/* Mobile Navigation Dropdown */
+.nav-mobile {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: rgba(15, 23, 42, 0.98);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(157, 80, 255, 0.2);
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  gap: 20px;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-15px);
+  transition: var(--transition);
+}
+
+.nav-mobile.open {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.mobile-link { color: white; font-size: 1.1rem; font-weight: 600; }
+.nav-divider { border: 0; border-top: 1px solid rgba(157, 80, 255, 0.2); }
+.mobile-signup {
+  background: var(--primary);
+  color: white;
+  padding: 16px;
+  border-radius: 14px;
+  text-align: center;
+  font-weight: 700;
+}

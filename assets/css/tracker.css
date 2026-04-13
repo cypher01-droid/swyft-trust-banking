@@ -1,0 +1,142 @@
+/* tracker.css - Zeus Visual Audit */
+.tracker-section {
+  padding: 120px 24px;
+  background: #0a0a0c;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background Ambient Glow */
+.tracker-section::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(157, 80, 255, 0.1), transparent 70%);
+  z-index: 0;
+}
+
+.tracker-container {
+  max-width: 850px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.status-badge-tracker {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #9d50ff;
+  padding: 10px 20px;
+  border-radius: 100px;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  border: 1px solid rgba(157, 80, 255, 0.2);
+  margin-bottom: 30px;
+}
+
+.tracker-header h2 {
+  font-size: clamp(2rem, 6vw, 3rem);
+  font-weight: 900;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.tracker-header h2 span { color: #9d50ff; }
+
+/* The Glass Terminal */
+.glass-terminal {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border-radius: 30px;
+  padding: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+  margin-top: 50px;
+}
+
+.tracker-form {
+  display: flex;
+  gap: 15px;
+}
+
+.input-wrapper {
+  flex: 1;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  padding: 5px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.tracker-form input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  height: 60px;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 500;
+  outline: none;
+}
+
+/* The Neomorphic Action Button */
+.neo-track-btn {
+  background: #9d50ff;
+  color: white;
+  border: none;
+  padding: 0 35px;
+  border-radius: 20px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.3), 
+              inset 2px 2px 5px rgba(255, 255, 255, 0.2);
+}
+
+.neo-track-btn:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 10px 10px 30px rgba(157, 80, 255, 0.4);
+}
+
+.neo-track-btn:active {
+  transform: translateY(0) scale(0.98);
+  box-shadow: inset 4px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.tracker-info {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    color: #64748b;
+}
+
+.info-item { display: flex; align-items: center; gap: 8px; font-weight: 600; }
+.dot.pulse {
+    width: 8px; height: 8px; background: #00f294; border-radius: 50%;
+    box-shadow: 0 0 10px #00f294;
+    animation: pulseStatus 2s infinite;
+}
+
+@keyframes pulseStatus {
+    0% { opacity: 0.4; }
+    50% { opacity: 1; }
+    100% { opacity: 0.4; }
+}
+
+@media (max-width: 768px) {
+    .tracker-form { flex-direction: column; }
+    .neo-track-btn { height: 65px; justify-content: center; }
+}

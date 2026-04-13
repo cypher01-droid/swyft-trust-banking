@@ -1,0 +1,28 @@
+/* main.css - The Foundation */
+:root {
+  --primary: #9d50ff;
+  --primary-glow: rgba(157, 80, 255, 0.4);
+  --bg-dark: #0f172a;
+  --text-main: #ffffff;
+  --text-muted: #94a3b8;
+  --glass-bg: rgba(10, 10, 12, 0.8);
+  
+  /* Neomorphic Shadows */
+  --neo-shadow-dark: rgba(0, 0, 0, 0.5);
+  --neo-shadow-light: rgba(255, 255, 255, 0.05);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  overflow-x: hidden;
+}
+
+a { text-decoration: none; transition: 0.3s; }
